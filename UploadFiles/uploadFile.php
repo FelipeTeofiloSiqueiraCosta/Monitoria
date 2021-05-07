@@ -37,7 +37,7 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
       // Evita nomes com acentos, espaços e caracteres não alfanuméricos
       $novoNome = uniqid ( time () ) . '.' . $extensao;
 
-      // Concatena a pasta com o nome ------------------------ aaaaabbbb
+      // Concatena a pasta com o nome ------------------------ aaaaabbbb asdas
       $destino =  './Images/'.$novoNome;
       // echo "<br><br>Arquivo: $arquivo_tmp";
       // echo "<br><br>DESTINO: ".$destino;
