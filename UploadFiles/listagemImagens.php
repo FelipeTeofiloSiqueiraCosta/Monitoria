@@ -29,7 +29,7 @@
           $tipo = $resultado['tipo'];
           $tamanho = $resultado['tamanho'];
   
-          echo"<tr><td>$id</td> <td style='background-image: url(./Images/$image);background-position: center;background-repeat: no-repeat;width: 50px; height: 50px;background-size: cover;'></td> <td>$image</td> <td>$tipo</td><td>$tamanho</td> <td><a href='excluirImagem.php?id=$id'>Excluir</a> <a href='formAlterarImagem.php?id=$id'>Alterar</a></td></tr>";
+          echo"<tr><td>$id</td> <td style='background-image: url(./Images/$image);background-position: center;background-repeat: no-repeat;width: 50px; height: 50px;background-size: cover;'></td> <td>$image</td> <td>$tipo</td><td>$tamanho</td> <td><a href='excluirImagem.php?id=".json_encode($resultado)."'>Excluir</a> <a href='formAlterarImagem.php?id=".json_encode($resultado)."'>Alterar</a></td></tr>";
           $resultado = mysqli_fetch_assoc($comando);
       
         }
