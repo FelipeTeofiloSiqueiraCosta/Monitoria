@@ -19,8 +19,8 @@ create table usuario(
 
 create table image(
 	id int primary key auto_increment,
-    nome varchar(35) not null,
-    im mediumblob not null,
+    nome varchar(200) not null,
+    im mediumblob,
     tipo varchar(20),
     tamanho int(10) unsigned NOT NULL
 );

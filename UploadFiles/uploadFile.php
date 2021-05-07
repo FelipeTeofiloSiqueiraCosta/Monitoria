@@ -1,4 +1,7 @@
 <?php
+
+  include '../CrudProduto/connection.php';
+
   date_default_timezone_set("America/Sao_Paulo");
   function current_url()
     {
@@ -46,18 +49,34 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
       if ( @move_uploaded_file ( $arquivo_tmp, $destino ) ) {
           // echo 'Arquivo salvo com sucesso em : <strong>' . $destino . '</strong><br />';
           // echo ' <img src = "'.$destino.'"  style="width: 100px;"/>';
-          echo "<br><br>Sucesso ao enviar o arquivo!";
+          $tam = $_FILES[ 'arquivo' ][ 'size' ];
+          $comando = mysqli_query($conexao, "INSERT INTO `dbmonitoria`.`image` (`nome`, `tipo`, `tamanho`) VALUES ('$novoNome', '$extensao', '$tam')");
+          if(!$comando){
+            unlink("./Images/".$novoNome);
+          echo "<br><br>Erro ao enviar o arquivo!";
+          
+          }else{
+            echo "<br><br>Sucesso ao enviar o arquivo!";
+          
+          }
+          header('refresh: 3, url=listagemImagens.php');
+          
+          
+      }
+      else{
+          echo '<br><br>Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
           header('refresh: 3, url=index.php');
       }
-      else
-          echo '<br><br>Erro ao salvar o arquivo. Aparentemente você não tem permissão de escrita.<br />';
   }
-  else
+  else{
       echo '<br><br>Você poderá enviar apenas arquivos "*.jpg;*.jpeg;*.gif;*.png"<br />';
+      header('refresh: 3, url=index.php');
+  }
 }
-else
+else{
   echo '<br><br>Você não enviou nenhum arquivo!';
   header('refresh: 3, url=index.php');
+}
 
   // -----------------------------------------------------------------------------------------------------------------
 
