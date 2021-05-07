@@ -1,2 +1,3 @@
 Este Projeto visa proporcionar documentos e arquivos para estudo de monitoria em PHP.
-Aproveitem!
+Aproveitem! 
+Apreçam no atendimento para tirarem as duvidas
