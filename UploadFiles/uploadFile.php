@@ -32,12 +32,12 @@ if ( isset( $_FILES[ 'arquivo' ][ 'name' ] ) && $_FILES[ 'arquivo' ][ 'error' ] 
   // Aqui eu enfileiro as extensões permitidas e separo por ';'
   // Isso serve apenas para eu poder pesquisar dentro desta String
   if ( strstr ( '.jpg;.jpeg;.gif;.png', $extensao ) ) {
-      // Cria um nome único para esta imagem
+      // Cria um nome único para esta imagem 
       // Evita que duplique as imagens no servidor.
       // Evita nomes com acentos, espaços e caracteres não alfanuméricos
       $novoNome = uniqid ( time () ) . '.' . $extensao;
 
-      // Concatena a pasta com o nome ------------------------ aaaaa
+      // Concatena a pasta com o nome ------------------------ aaaaabbbb
       $destino =  './Images/'.$novoNome;
       // echo "<br><br>Arquivo: $arquivo_tmp";
       // echo "<br><br>DESTINO: ".$destino;
