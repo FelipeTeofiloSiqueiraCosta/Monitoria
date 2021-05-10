@@ -2,8 +2,8 @@
 
 include '../CrudProduto/connection.php';
 
-$e = ($_POST['email']);
-$s = ($_POST['senha']);
+$e = addslashes($_POST['email']);
+$s = addslashes($_POST['senha']);
 
 echo "email: ".$e. " <br>senha: ".$s;
 
