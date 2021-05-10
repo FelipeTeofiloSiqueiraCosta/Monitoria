@@ -1,0 +1,22 @@
+{
+  "name": "MONITORIA",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc --build",
+    "clean": "tsc --build --clean"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FelipeTeofiloSiqueiraCosta/Monitoria.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/FelipeTeofiloSiqueiraCosta/Monitoria/issues"
+  },
+  "homepage": "https://github.com/FelipeTeofiloSiqueiraCosta/Monitoria#readme"
+}

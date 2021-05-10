@@ -51,10 +51,14 @@
     // echo"</table>";
     ?>
 </div>
+<script src="./dist/encript.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.js" integrity="sha512-n/4gHW3atM3QqRcbCn6ewmpxcLAHGaDjpEBu4xZd47N0W2oQ+6q7oc3PXstrJYXcbNU1OHdQ1T7pAP+gi5Yu8g==" crossorigin="anonymous"></script>
 </body>
 
 <script type="text/javascript">
+
+    var s = new Script(35);
+
   let num=-1;
 
       $("#valor").on('keyup',function(e){
@@ -105,10 +109,14 @@
           },
           success: function( result ) {
             let text = '';
-
-            // console.log(result);
-
-            document.getElementById('content').innerHTML = result;
+            let r = JSON.parse(result);
+            
+            for(let i=0;i<r.length;i++){
+              text += "<tr><td>"+s.Decript(r[i]['id'])+"</td> <td>"+s.Decript(r[i]['descricao'])+"</td>"+
+              "<td>"+s.Decript(r[i]['preco'])+"</td> <td>"+s.Decript(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+s.Decript(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+s.Decript(r[i]['id'])+"'>Alterar</a></td></tr>";
+            }
+            
+            document.getElementById('content').innerHTML = text;
           }
         });
   });
