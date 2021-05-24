@@ -27,7 +27,7 @@ create table image(
 
 INSERT INTO `dbmonitoria`.`usuario` (`nome`, `email`, `senha`) VALUES ('felipe', 'fe@fe.com', '123');
 INSERT INTO `dbmonitoria`.`produto` (`descricao`, `qteEstoque`, `preco`) VALUES ('arroz', '1', '12.5');
-
+select * from produto where preco <= 12;
 select * from produto;
 select * from image;
 

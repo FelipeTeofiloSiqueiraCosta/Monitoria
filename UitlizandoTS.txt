@@ -23,7 +23,7 @@ criar arquivo de configuração do typescript na raiz do projeto
 adicionar comando ao packge.json na area de scripts
   tem que estar assim:
           "scripts": {
-            "build": "tsc --build",
+            "build": "tsc --build", -> comando para transpilação de codigo .ts para .js
             "clean": "tsc --build --clean"
           },
 

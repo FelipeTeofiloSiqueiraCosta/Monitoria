@@ -74,8 +74,18 @@
           },
           success: function( result ) {
             let text = '';
+            let r = JSON.parse(result);
             
-            document.getElementById('content').innerHTML = result;
+            for(let i=0;i<r.length;i++){
+              text += "<tr><td>"+s.Decript(r[i]['id'])+"</td> <td>"+s.Decript(r[i]['descricao'])+"</td>"+
+              "<td>"+s.Decript(r[i]['preco'])+"</td> <td>"+s.Decript(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+s.Decript(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+s.Decript(r[i]['id'])+"'>Alterar</a></td></tr>";
+              text="";
+              text += "<tr><td>"+(r[i]['id'])+"</td> <td>"+(r[i]['descricao'])+"</td>"+
+              "<td>"+(r[i]['preco'])+"</td> <td>"+(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+(r[i]['id'])+"'>Alterar</a></td></tr>";
+              
+            }
+            
+            document.getElementById('content').innerHTML = text;
           }
         });
 
@@ -89,9 +99,18 @@
           },
           success: function( result ) {
             let text = '';
-
-
-            document.getElementById('content').innerHTML = result;
+            let r = JSON.parse(result);
+            
+            for(let i=0;i<r.length;i++){
+              text += "<tr><td>"+s.Decript(r[i]['id'])+"</td> <td>"+s.Decript(r[i]['descricao'])+"</td>"+
+              "<td>"+s.Decript(r[i]['preco'])+"</td> <td>"+s.Decript(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+s.Decript(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+s.Decript(r[i]['id'])+"'>Alterar</a></td></tr>";
+              text="";
+              text += "<tr><td>"+(r[i]['id'])+"</td> <td>"+(r[i]['descricao'])+"</td>"+
+              "<td>"+(r[i]['preco'])+"</td> <td>"+(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+(r[i]['id'])+"'>Alterar</a></td></tr>";
+              
+            }
+            
+            document.getElementById('content').innerHTML = text;
           }
         });
         }
@@ -114,6 +133,10 @@
             for(let i=0;i<r.length;i++){
               text += "<tr><td>"+s.Decript(r[i]['id'])+"</td> <td>"+s.Decript(r[i]['descricao'])+"</td>"+
               "<td>"+s.Decript(r[i]['preco'])+"</td> <td>"+s.Decript(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+s.Decript(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+s.Decript(r[i]['id'])+"'>Alterar</a></td></tr>";
+              // text="";
+              // text += "<tr><td>"+(r[i]['id'])+"</td> <td>"+(r[i]['descricao'])+"</td>"+
+              // "<td>"+(r[i]['preco'])+"</td> <td>"+(r[i]['qteEstoque'])+"</td> <td><a href='../CrudProduto/excluirProduto.php?id="+(r[i]['id'])+"'>Excluir</a> <a href='../CrudProduto/formAlterarProduto.php?id="+(r[i]['id'])+"'>Alterar</a></td></tr>";
+              
             }
             
             document.getElementById('content').innerHTML = text;
