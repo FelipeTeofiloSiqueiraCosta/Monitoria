@@ -1,0 +1,12 @@
+Este arquivo é destinado as pessoas que querem aprender outra forma de se conectar com o banco de dados
+por meios diferentes com php...
+
+os arquivos como globalController.php e conexao.php são superficiáis
+
+para mais informações acesse:
+
+https://www.gigasystems.com.br/artigo/22/crud-com-php-pdo#:~:text=Uma%20observa%C3%A7%C3%A3o%20interessante%20%C3%A9%20que,diferente%20a%20string%20de%20conex%C3%A3o.
+
+Este arquivo irá te ensinar a como fazer um crud com PDO;
+
+:)
